@@ -205,7 +205,7 @@ document.addEventListener('DOMContentLoaded', async () => {
     const items = suggestionsList.querySelectorAll('li');
     if (!items.length) {
       if (e.key === 'Enter') {
-        window.location.href = `search.html?query=${encodeURIComponent(searchInput.value.trim())}`;
+        window.location.href = `/modulos/search.html?query=${encodeURIComponent(searchInput.value.trim())}`;
       }
       return;
     }
@@ -227,7 +227,7 @@ document.addEventListener('DOMContentLoaded', async () => {
         items[suggestionIndex].click();
         suggestionIndex = -1;
       } else {
-        window.location.href = `search.html?query=${encodeURIComponent(searchInput.value.trim())}`;
+        window.location.href = `/modulos/search.html?query=${encodeURIComponent(searchInput.value.trim())}`;
       }
     } else if (e.key === 'Escape') {
       suggestionsList.hidden = true;
@@ -239,7 +239,7 @@ document.addEventListener('DOMContentLoaded', async () => {
   suggestionsList.addEventListener('mousedown', (e) => {
     if (e.target.tagName === 'LI') {
       const query = e.target.textContent;
-      window.location.href = `search.html?query=${encodeURIComponent(query)}`;
+      window.location.href = `/modulos/search.html?query=${encodeURIComponent(query)}`;
     }
   });
 
