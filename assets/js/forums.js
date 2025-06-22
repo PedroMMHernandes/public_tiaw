@@ -25,7 +25,7 @@ async function exibirForuns(categoriaId = null) {
     const foruns = await api();
     const categorias = await apiCategoria();
 
-    const respostaUsuarios = await fetch("/usuarios");
+    const respostaUsuarios = await fetch("https://tiaw-synapso.onrender.com/usuarios");
     const usuarios = await respostaUsuarios.json();
 
     const exibirForuns = document.getElementById("exibirForuns");
