@@ -88,7 +88,7 @@ document.addEventListener("DOMContentLoaded", () => {
     container.appendChild(botao);
 
     // Carregar categorias no select
-    fetch("/categorias")
+    fetch("https://tiaw-synapso.onrender.com/categorias")
       .then(res => res.json())
       .then(categorias => {
         const select = document.getElementById("categoriaPost");
@@ -120,7 +120,7 @@ document.addEventListener("DOMContentLoaded", () => {
         quantidade_comentarios: 0
       };
 
-      fetch('/forum', {
+      fetch('https://tiaw-synapso.onrender.com/forum', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(novoPost)
