@@ -17,24 +17,27 @@
 <body>
     <header id="main-header"></header>
 
-    <aside>
-        <button class="voltarBTN" onclick="history.back()">Voltar</button>
-    </aside>
+    <div class="layout">
+        <aside>
+            <button class="voltarBTN" onclick="history.back()">Voltar</button>
+        </aside>
 
-    <main>
-        <div id="detalhes-forum" class="topico-principal"></div>
+        <main>
+            <div id="detalhes-forum" class="topico-principal"></div>
 
-        <h2>Comentários</h2>
-        <form id="comentarios-forum">
-            <input type="hidden" id="comentarios-id">
-            <textarea id="comentario-mensagem" placeholder="Digite seu comentário..." rows="4"></textarea><br>
-            <button type="submit">Enviar</button>
-            <button type="button" id="cancelar" style="display:none;">Cancelar</button>
-        </form>
+            <h2>Comentários</h2>
+            <form id="comentarios-forum">
+                <input type="hidden" id="comentarios-id">
+                <textarea id="comentario-mensagem" placeholder="Digite seu comentário..." rows="4"></textarea><br>
+                <button type="submit">Enviar</button>
+                <button type="button" id="cancelar" style="display:none;">Cancelar</button>
+            </form>
 
-        <div id="comentarios"></div>
-    </main>
+            <div id="comentarios"></div>
+        </main>
+    </div>
 
     <footer id="main-footer"></footer>
 </body>
+
 </html>
