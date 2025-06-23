@@ -5,11 +5,15 @@ body {
     font-size: larger;
     font-family: 'Segoe UI', sans-serif;
     color: #093070; 
+        flex-direction: row;
+    align-items: flex-start;
 }
 
 main {
+    flex: 1;
     padding: 10px;
 }
+
 
 header {
     background-color: #BDB2FF; 
@@ -25,21 +29,25 @@ header {
 }
 
 aside {
-    background-color: #C9F9D9; 
-    color: #093070; 
+    background-color: #C9F9D9;
+    color: #093070;
     text-align: justify;
     font-size: 1.2em;
     font-weight: bold;
     display: flex;
-    justify-content: space-around;
-    float: left;
-    width: 200px;
-    height: 1000px;
+    flex-direction: column;
+    justify-content: flex-start;
+    width: 220px;
+    max-width: 250px;
+    height: fit-content;
     margin-bottom: 20px;
     margin-right: 20px;
     padding: 10px;
     border-radius: 8px;
+    position: sticky;
+    top: 20px;
 }
+
 
 .comentario {
   background-color: #BDB2FF;
