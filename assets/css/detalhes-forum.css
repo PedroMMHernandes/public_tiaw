@@ -1,16 +1,27 @@
-/* Corrige o layout da página de fórum */
 body {
-    flex-direction: row;
-    align-items: flex-start;
-}
-
-header, footer {
-    width: 100%;
+    background-color: #bde0fe; 
+    margin: 0;
+    padding: 10px;
+    font-size: larger;
+    font-family: 'Segoe UI', sans-serif;
+    color: #093070; 
 }
 
 main {
-    flex: 1;
-    padding: 20px;
+    padding: 10px;
+}
+
+header {
+    background-color: #BDB2FF; 
+    color: #093070; 
+    border-radius: 20px 20px 0 0;
+    text-align: center;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    justify-content: left;
+    padding: 10px 20px;
+    margin-bottom: 20px;
 }
 
 aside {
@@ -27,7 +38,6 @@ aside {
     align-items: center;
     gap: 10px;
 }
-
 
 .comentario {
   background-color: #BDB2FF;
