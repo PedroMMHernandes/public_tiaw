@@ -2,11 +2,12 @@
 @import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css");
 
 h3 {
-    color: #093070;
-    border-bottom: 1px solid #c1c1c1;
+    color: #bde0fe; 
+    border-bottom: 1px solid #BDB2FF; 
 }
+
 h4 {
-    color: #ff7645;
+    color: #BDB2FF; 
 }
 
 .banner img {
@@ -15,7 +16,7 @@ h4 {
 
 .barra-info {
     height: 2em;
-    background-color: #f0f0f0;
+    background-color: #C9F9D9; 
     display: flex;
     justify-content: space-between;
 }
@@ -36,26 +37,28 @@ h4 {
 
 .menu li a {
     text-decoration: none;
-    color: #ff7645;
+    color: #bde0fe; 
     font-weight: bold;
 }
 
 .menu li:hover {
-    background-color: darkblue;
-    color: white;
+    background-color: #BDB2FF; 
+    color: #093070;
 }
 
 .dados-usuario {
     height: 2em;
     line-height: 2em;
     margin-right: 20px;
+    color: #093070; 
 }
 
 main {
     padding: 20px;
+    background-color: #F5FCFC; 
+    color: #093070; 
 }
 
-/*css da barra de pesquisa*/
 .search-bar-container {
   position: relative;
   display: flex;
@@ -68,19 +71,32 @@ main {
   flex: 1;
   padding: 8px 12px;
   font-size: 14px;
-  border: 1px solid #ccc;
+  border: 1px solid #BDB2FF;
   border-radius: 6px 0 0 6px;
   outline: none;
+  background-color: #bde0fe; 
+  color: #093070; 
+  transition: box-shadow 0.2s ease;
+}
+
+#search:focus {
+  box-shadow: 0 0 8px 2px #BDB2FFAA; 
 }
 
 .search-btn {
   padding: 8px 12px;
-  border: 1px solid #ccc;
+  border: 1px solid #BDB2FF; 
   border-left: none;
-  background-color: #4a90e2;
+  background-color: #093070; 
   color: white;
   border-radius: 0 6px 6px 0;
   cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.search-btn:hover {
+  background-color: #BDB2FF; 
+  color: #093070;
 }
 
 .search-suggestions {
@@ -88,14 +104,14 @@ main {
   top: 100%;
   left: 0;
   right: 0;
-  background-color: #fff;
-  border: 1px solid #ccc;
+  background-color: #bde0fe; 
+  border: 1px solid #C9F9D9; 
   border-top: none;
   z-index: 1000;
   max-height: 200px;
   overflow-y: auto;
   border-radius: 0 0 6px 6px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 4px 8px #C9F9D9AA; 
   list-style: none;
   padding: 0;
   margin: 0;
@@ -107,7 +123,8 @@ main {
   display: flex;
   justify-content: space-between;
   font-size: 14px;
-  border-bottom: 1px solid #eee;
+  border-bottom: 1px solid #BDB2FF; 
+  color: #093070; 
 }
 
 .search-suggestions li:last-child {
@@ -116,11 +133,12 @@ main {
 
 .search-suggestions li:hover,
 .search-suggestions li.active {
-  background-color: #f0f0f0;
+  background-color: #BDB2FF; 
+  color: #093070; 
 }
 
 .sug-tipo {
   font-size: 12px;
-  color: #666;
+  color: #093070; 
   margin-left: 8px;
 }

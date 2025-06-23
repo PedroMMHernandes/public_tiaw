@@ -1,6 +1,3 @@
-/* estilização da searchbar, pois fica no header, independente da página de pesquisa*/
-
-/* Reset básico */
 * {
   margin: 0;
   padding: 0;
@@ -11,29 +8,32 @@ body {
   display: flex;
   flex-direction: column;
   min-height: 100vh;
-  background: #555;
+  background: #093070;  
   font-family: sans-serif;
-  color: white;
+  color: #bde0fe;       
   overflow-x: hidden; 
 }
-main{ flex-grow: 1; }
 
-/* Header */
+main {
+  flex-grow: 1;
+}
+
 header {
   display: flex;
   align-items: center;
-  background: navy;
-  color: white;
+  background: #093070;  
+  color: #bde0fe;       
   padding: 0.7rem 0.5em;
+  box-shadow: 0 2px 6px #C9F9D9AA;  
 }
 
-/* Footer */
 footer {
   text-align: center;
-  background-color: #333;
-  color: white;
+  background-color: #093070; 
+  color: #BDB2FF;            
   padding: 0.7rem 0;
   font-size: 1rem;
+  box-shadow: inset 0 1px 3px #C9F9D9AA; 
 }
 
 .footer-content {
@@ -42,7 +42,6 @@ footer {
   opacity: 0.85;
 }
 
-/* Barra de pesquisa global */
 .search-bar-container {
   position: relative;
   margin: 1.2rem auto 1.5rem auto;
@@ -58,18 +57,17 @@ footer {
   font-size: 1rem;
   border-radius: 50px;
   border: none;
-  background: white;
-  color: #222;
-  box-shadow: 0 2px 8px rgba(25, 118, 210, 0.07);
+  background: #bde0fe;  
+  color: #093070;        
+  box-shadow: 0 2px 8px #C9F9D9AA; 
   transition: box-shadow 0.2s;
   outline: none;
 }
 
 #search:focus {
-  box-shadow: 0 2px 12px rgba(25, 118, 210, 0.15);
+  box-shadow: 0 2px 12px #BDB2FFAA; 
 }
 
-/* Botão de pesquisa */
 .search-btn {
   position: absolute;
   right: 0.7rem;
@@ -77,82 +75,87 @@ footer {
   transform: translateY(-50%);
   background: none;
   border: none;
-  color: blue;
+  color: #BDB2FF;  
   font-size: 1.3em;
   cursor: pointer;
   z-index: 31;
   transition: color 0.2s;
 }
+
 .search-btn:hover {
-  color: #1565c0;
+  color: #bde0fe; 
 }
 
-/* Sugestões de busca */
 .search-suggestions {
   position: absolute;
   top: 110%;
   left: 0;
   right: 0;
-  background: white;
-  color: #222;
+  background: #bde0fe; 
+  color: #093070;      
   list-style: none;
-  border: 1px solid #e3f2fd;
+  border: 1px solid #C9F9D9; 
   border-radius: 10px;
-  box-shadow: 0 4px 16px rgba(25, 118, 210, 0.10);
+  box-shadow: 0 4px 16px #C9F9D9AA; 
   z-index: 30;
   display: none;
   width: 100%;
   min-width: 220px;
   margin: 0;
 }
-
 .search-suggestions li {
   padding: 0.7em 1em;
   cursor: pointer;
   transition: background 0.15s;
 }
-.search-suggestions li:first-child{ border-radius: 10px 10px 0 0; }
-.search-suggestions li:last-child { border-radius: 0 0 10px 10px; }
+
+.search-suggestions li:first-child {
+  border-radius: 10px 10px 0 0;
+}
+
+.search-suggestions li:last-child {
+  border-radius: 0 0 10px 10px;
+}
 
 .search-suggestions li:hover,
 .search-suggestions li.active {
-  background: #e3f2fd;
-  color: blue;
+  background: #BDB2FF;
+  color: #093070;      
 }
-.pag-ini{
-    padding:2em;
-    text-align:center;
-    font-size:1.5em;
-    color:white;
+
+.pag-ini {
+  padding: 2em;
+  text-align: center;
+  font-size: 1.5em;
+  color: #bde0fe; 
 }
-/* Ícone de usuário/logout */
-/* Ícone de usuário */
+
 .user-icon {
   position: relative;
   margin-left: auto;
   margin-right: 0.7rem;
   cursor: pointer;
   font-size: 1.6em;
-  color: white;
+  color: #bde0fe; 
   transition: color 0.2s ease;
   display: flex;
   align-items: center;
 }
 
 .user-icon:hover {
-  color: #90caf9;
+  color: #C9F9D9; 
 }
 
 .login-popup {
   position: absolute;
   top: 120%;
   right: 0;
-  background-color: white;
-  color: #222;
-  border: 1px solid #ccc;
+  background-color: #bde0fe; 
+  color: #093070; 
+  border: 1px solid #C9F9D9; 
   border-radius: 10px;
   padding: 12px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
+  box-shadow: 0 4px 12px #C9F9D9AA; 
   z-index: 1000;
   display: none;
   width: 240px;
@@ -163,15 +166,17 @@ footer {
   padding: 6px 10px;
   margin-bottom: 8px;
   border-radius: 6px;
-  border: 1px solid #ccc;
+  border: 1px solid #093070; 
   font-size: 0.95rem;
+  background-color: #fff;
+  color: #093070;
 }
 
 .login-popup button {
   width: 100%;
   padding: 6px 10px;
   margin-bottom: 6px;
-  background-color: navy;
+  background-color: #093070; 
   color: white;
   border: none;
   border-radius: 6px;
@@ -180,10 +185,10 @@ footer {
 }
 
 .login-popup button:hover {
-  background-color: #1565c0;
+  background-color: #bdb2ff; 
+  color: #093070;
 }
 
-/* Ajustes para responsividade do popup */
 @media (max-width: 500px) {
   .login-popup {
     right: -20px;
@@ -191,8 +196,6 @@ footer {
   }
 }
 
-/* Mantém estilização existente da barra de pesquisa e header */
-/* Navegação links no header */
 .nav-links {
   display: flex;
   gap: 1rem;
@@ -200,12 +203,12 @@ footer {
 }
 
 .nav-links a {
-  color: white;
+  color: #bde0fe; 
   text-decoration: none;
   font-weight: bold;
   transition: color 0.2s;
 }
 
 .nav-links a:hover {
-  color: #90caf9;
+  color: #C9F9D9;
 }

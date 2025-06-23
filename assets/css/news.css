@@ -3,10 +3,11 @@
 }
 
 body {
-    background-color: #e9e5db;
+    background-color: #bde0fe; 
     margin: 0;
     padding: 10px;
     font-size: larger;
+    color: #093070; 
 }
 
 main {
@@ -14,7 +15,8 @@ main {
 }
 
 footer, header {
-    background-color: #588157;
+    background-color: #BDB2FF; 
+    color: #093070;
     border-radius: 0 0 20px 20px;
     text-align: center;
     font-weight: bold;
@@ -24,18 +26,28 @@ footer, header {
     padding: 10px 20px;
 }
 
+footer {
+    border-radius: 0 0 20px 20px;
+}
+
 header {
     border-radius: 20px 20px 0 0;
     margin-bottom: 10px;
 }
 
 aside {
-    background-color: #a3b18a;
-    border-radius: 20px;
-    padding: 20px;
-    min-width: 220px;
+    background-color: #BDB2FF; 
+    text-align: justify;
+    font-size: medium;
+    float: left;
+    width: 220px;
     max-width: 250px;
     height: fit-content;
+    margin-bottom: 10px;
+    margin-right: 20px;
+    padding: 20px;
+    border-radius: 20px;
+    color: #093070;
     display: flex;
     flex-direction: column;
     gap: 10px;
@@ -45,49 +57,60 @@ aside {
 
 aside h1 {
     font-weight: lighter;
-    background-color: #588157;
-    border-radius: 15px;
+    background-color: #bde0fe; 
+    color: #093070; 
+    border-radius: 20px;
     text-align: center;
-    padding: 5px 10px;
-    color: white;
+    padding: 5px;
 }
 
 .voltarBTN, .categoriaBTN {
-    background-color: #909e75;
-    color: black;
-    border: 1px solid #3a5a40;
-    border-radius: 15px;
-    padding: 5px 10px;
+    color: #093070; 
+    border-radius: 20px;
+    border: 1px solid #093070;
+    background: #C9F9D9; 
+    width: 200px;
+    height: 30px;
+    margin: 0 auto;
+    display: inline-block;
+    line-height: 30px;
     text-align: center;
+    margin-bottom: 10px;
     cursor: pointer;
     transition: all 0.3s ease;
-    width: 100%;
 }
 
 .categoriaBTN:hover, .voltarBTN:hover {
-    border-color: #dad7cd;
+    border: 1px solid #bde0fe; 
     transform: scale(1.05);
+    box-shadow: 0 0 8px #bde0fe88;
+    background-color: #BDB2FF; 
+    color: #093070;
 }
 
 .categoriaBTN.ativa {
-    background-color: #588157;
-    color: white;
-    font-weight: bold;
+    background-color: #093070; 
+    color: #fff;
+    border-radius: 15px;
+    text-align: center;
+    padding: 5px 10px;
 }
 
 .card-noticia {
-    background-color: #dad7cd;
+    background-color: #C9F9D9; 
     border-radius: 15px;
+    margin-left: 220px;
     padding: 15px;
-    margin-bottom: 20px;
+    box-shadow: 0 2px 5px rgba(9,48,112,0.1); 
+    color: #093070;
     cursor: pointer;
-    box-shadow: 2px 2px 5px rgba(0,0,0,0.1);
     transition: all 0.3s ease;
 }
 
 .card-noticia:hover {
     transform: scale(1.02);
-    background-color: #a3b18a;
+    background-color: #bde0fe; 
+    box-shadow: 0 4px 12px rgba(9,48,112,0.2);
 }
 
 .detalhes-noticia {
@@ -96,7 +119,7 @@ aside h1 {
     gap: 15px;
     margin-top: 5px;
     font-size: 0.9em;
-    color: #344e41;
+    color: #093070;
 }
 
 .detalhes-noticia span {
@@ -116,7 +139,6 @@ aside h1 {
     }
 }
 
-/* css da barra de pesquisa */
 .search-bar-container {
   position: relative;
   display: flex;
@@ -129,19 +151,30 @@ aside h1 {
   flex: 1;
   padding: 8px 12px;
   font-size: 14px;
-  border: 1px solid #ccc;
+  border: 1px solid #093070; 
   border-radius: 6px 0 0 6px;
   outline: none;
+  color: #093070;
+  background-color: #f0f6ff; 
+}
+
+#search::placeholder {
+  color: #bdbfff; 
 }
 
 .search-btn {
   padding: 8px 12px;
-  border: 1px solid #ccc;
+  border: 1px solid #093070; 
   border-left: none;
-  background-color: #4a90e2;
+  background-color: #093070;
   color: white;
   border-radius: 0 6px 6px 0;
   cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.search-btn:hover {
+  background-color: #0a3a99; 
 }
 
 .search-suggestions {
@@ -150,13 +183,13 @@ aside h1 {
   left: 0;
   right: 0;
   background-color: #fff;
-  border: 1px solid #ccc;
+  border: 1px solid #bde0fe; 
   border-top: none;
   z-index: 1000;
   max-height: 200px;
   overflow-y: auto;
   border-radius: 0 0 6px 6px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 4px 8px rgba(9,48,112,0.1); 
   list-style: none;
   padding: 0;
   margin: 0;
@@ -169,6 +202,7 @@ aside h1 {
   justify-content: space-between;
   font-size: 14px;
   border-bottom: 1px solid #eee;
+  color: #093070;
 }
 
 .search-suggestions li:last-child {
@@ -177,7 +211,8 @@ aside h1 {
 
 .search-suggestions li:hover,
 .search-suggestions li.active {
-  background-color: #f0f0f0;
+  background-color: #BDB2FF; 
+  color: #093070;
 }
 
 .sug-tipo {
@@ -185,11 +220,3 @@ aside h1 {
   color: #666;
   margin-left: 8px;
 }
-
-/* Paleta de cores:
-#dad7cd
-#a3b18a
-#588157
-#3a5a40
-#344e41
-*/
