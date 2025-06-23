@@ -242,3 +242,10 @@ main {
 header, footer {
     width: 100%;
 }
+.layout {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    gap: 20px;
+}
+
