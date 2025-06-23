@@ -39,7 +39,6 @@ aside {
     background-color: #BDB2FF;
     text-align: justify;
     font-size: medium;
-    float: left;
     width: 220px;
     max-width: 250px;
     height: fit-content;
@@ -53,7 +52,9 @@ aside {
     gap: 10px;
     position: sticky;
     top: 20px;
+    flex-shrink: 0;
 }
+
 
 aside h1 {
     font-weight: lighter;
@@ -225,4 +226,19 @@ aside h1 {
     font-size: 12px;
     color: #666;
     margin-left: 8px;
+}
+body {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    gap: 20px;
+}
+
+main {
+    flex: 1;
+    padding: 10px;
+}
+
+header, footer {
+    width: 100%;
 }
