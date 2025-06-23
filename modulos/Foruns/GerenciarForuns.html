@@ -93,8 +93,8 @@
         tabela.innerHTML = "";
 
         Promise.all([
-            fetch("/usuarios").then(res => res.json()),
-            fetch("/categorias").then(res => res.json())
+            fetch("https://tiaw-synapso.onrender.com/usuarios").then(res => res.json()),
+            fetch("https://tiaw-synapso.onrender.com/categorias").then(res => res.json())
         ]).then(([usuarios, categorias]) => {
             dados.forEach(forum => {
                 const autor = usuarios.find(u => u.id == forum.autor_id);
@@ -128,7 +128,7 @@
         document.getElementById("forumComentarios").value = forum.quantidade_comentarios;
     }
     function carregarSelects() {
-    fetch("/usuarios")
+    fetch("https://tiaw-synapso.onrender.com/usuarios")
         .then(res => res.json())
         .then(usuarios => {
             const selectAutor = document.getElementById("forumAutor");
@@ -140,7 +140,7 @@
             });
         });
 
-    fetch("/categorias")
+    fetch("https://tiaw-synapso.onrender.com/categorias")
         .then(res => res.json())
         .then(categorias => {
             const selectCategoria = document.getElementById("forumCategoria");
